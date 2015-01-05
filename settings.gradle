@@ -1,1 +1,7 @@
 include ':app'
+rootProject.name = 'MyName'
+
+// prepend root project name to all child project names..
+rootProject.children.each { it.name = rootProject.name + '-' + it.name }
+
+
